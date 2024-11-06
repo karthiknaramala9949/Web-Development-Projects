@@ -1,0 +1,32 @@
+body{
+    color:black;
+    text-transform: uppercase;
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+h2{
+    color: red;
+}
+#start{
+    border-radius: 25px;
+    height: 5vh;
+    width: 15vw;
+    margin-right: 50px;
+    background-color: green;
+    cursor: pointer;
+}
+#stop{
+    border-radius: 25px;
+    height: 5vh;
+    width: 15vw;
+    background-color: red;
+    cursor: pointer;
+}
+.demo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
