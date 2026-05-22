@@ -1,22 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Note-Taking</title>
-    <link rel="stylesheet" href="home.css">
-</head>
-<body>
-    <h1>Take Notes by Speaking</h1>
-    <div class="demo">
-        <button id="start">Start Recording</button>
-        <button id="stop">Stop Recording</button>
-    </div>
-    <div>
-        <h2>Your Notes:</h2>
-        <div id="notes"> </div>
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="speech.js"></script>
+  <title>AI Speech Recognition</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+
+  <div class="background-glow"></div>
+
+  <main class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-circle">🎙</div>
+
+        <div>
+          <h2>Speech AI</h2>
+          <p>Voice Recognition Suite</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+
+        <h3>Recognition Settings</h3>
+
+        <div class="input-group">
+
+          <label>Language</label>
+
+          <select id="language">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+            <option value="kannada">Kannada</option>
+            <option value="tamil">Tamil</option>
+            <option value="telugu">Telugu</option>
+            <option value="malayalam">Malayalam</option>
+            <option value="bengali">Bengali</option>
+            <option value="marathi">Marathi</option>
+            <option value="gujarati">Gujarati</option>
+            <option value="punjabi">Punjabi</option>
+            <option value="urdu">Urdu</option>
+          </select>
+
+        </div>
+
+        <div class="status-box">
+
+          <span class="status-dot"></span>
+
+          <div>
+            <h4>Status</h4>
+            <p id="status-text">Idle</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar-card info-card">
+
+        <h3>Features</h3>
+
+        <ul>
+          <li>Real-time transcription</li>
+          <li>Multi-language support</li>
+          <li>Continuous recognition</li>
+          <li>Live interim results</li>
+          <li>Auto speech restart</li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <section class="main-panel">
+
+      <div class="top-bar">
+
+        <div>
+          <h1>Speech Recognition</h1>
+
+          <p>
+            Convert spoken audio into live text instantly.
+          </p>
+        </div>
+
+        <div class="action-buttons">
+
+          <button id="start" class="primary-btn">
+            Start Listening
+          </button>
+
+          <button id="stop" class="danger-btn" disabled>
+            Stop
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Live Recording Area -->
+      <div class="recording-panel">
+
+        <div class="recording-header">
+
+          <div class="recording-title">
+
+            <div class="pulse"></div>
+
+            <h3>Live Transcript</h3>
+
+          </div>
+
+          <button id="clear" class="clear-btn">
+            Clear Notes
+          </button>
+
+        </div>
+
+        <div id="notes" class="notes-container">
+
+          <div class="empty-state">
+
+            <div class="empty-icon">🎤</div>
+
+            <h3>No transcription yet</h3>
+
+            <p>
+              Start speaking to generate live text transcription.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="speech.js"></script>
+
 </body>
 </html>
