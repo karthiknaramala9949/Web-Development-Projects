@@ -1,28 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="search-wikipedia.css">
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="wiki-search-header text-center">
-        <img class="wiki-logo" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/wiki-logo-img.png" />
-        <br />
-        <input placeholder="Type a keyword and press Enter to search" type="search" class="search-input w-100" id="searchInput" />
-      </div>
-      <div class="d-none" id="spinner">
-        <div class="d-flex justify-content-center">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Wiki Search AI</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="search-wikipedia.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- Background Glow -->
+  <div class="bg-glow"></div>
+
+  <main class="main-container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+
+      <div class="hero-card">
+
+        <img
+          class="wiki-logo"
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/wiki-logo-img.png"
+          alt="Wikipedia Logo"
+        />
+
+        <h1>
+          Wikipedia Smart Search
+        </h1>
+
+        <p>
+          Search Wikipedia articles instantly with live results.
+        </p>
+
+        <!-- Search Box -->
+        <div class="search-box">
+
+          <svg
+            class="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+
+          </svg>
+
+          <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search Wikipedia..."
+          />
+
         </div>
+
       </div>
-      <div class="search-results" id="searchResults"></div>
+
+    </section>
+
+    <!-- SPINNER -->
+    <div class="d-none" id="spinner">
+
+      <div class="spinner-wrapper">
+
+        <div
+          class="spinner-border text-light"
+          role="status"
+        >
+          <span class="sr-only">
+            Loading...
+          </span>
+        </div>
+
+      </div>
+
     </div>
-    <script rel="javascript/text" src="search-wikipedia.js"></script>
-  </body>
+
+    <!-- SEARCH RESULTS -->
+    <section
+      class="search-results"
+      id="searchResults"
+    >
+
+      <!-- Empty State -->
+      <div class="empty-state">
+
+        <div class="empty-icon">
+          🔎
+        </div>
+
+        <h2>
+          Search Anything
+        </h2>
+
+        <p>
+          Start typing to explore Wikipedia articles.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script src="search-wikipedia.js"></script>
+
+</body>
+
 </html>
